@@ -3,7 +3,8 @@ export const pageData = {
     label: 'Why Choose LOKI',
     title: 'Premium Agricultural Products Exporter',
     description:
-      'LOKI ORIGIN GLOBAL PVT. LTD. is dedicated to delivering trusted agricultural export solutions with an emphasis on quality, consistency, and dependable service. We work to build strong global partnerships by offering products that meet buyer expectations for freshness, hygiene, and value.'
+      'LOKI ORIGIN GLOBAL PVT. LTD. is dedicated to delivering trusted agricultural export solutions with an emphasis on quality, consistency, and dependable service. We work to build strong global partnerships by offering products that meet buyer expectations for freshness, hygiene, and value.',
+    image: './resources/myimage.jpeg'
   },
   cards: [
     {

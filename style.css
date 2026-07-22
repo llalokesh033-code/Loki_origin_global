@@ -314,6 +314,44 @@ body {
   padding-left: 20px;
 }
 
+/* Hero layout with image */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 16px 40px rgba(11, 93, 59, 0.14);
+  border: 3px solid rgba(212, 175, 55, 0.9);
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual img {
+    max-width: 100%;
+  }
+}
+
 /* small-screen adjustments for header only */
 @media (max-width: 900px) {
   .header-inner {
