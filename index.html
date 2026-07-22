@@ -54,6 +54,41 @@
 		<div class="header-divider"></div>
 	</header>
 
+	<main class="page-shell">
+		<section class="intro-card" id="hero-section"></section>
+		<section class="info-grid" id="info-grid"></section>
+	</main>
+
+	<script type="module">
+		import { pageData } from './data.js';
+
+		const heroSection = document.querySelector('#hero-section');
+		const infoGrid = document.querySelector('#info-grid');
+
+		if (heroSection && pageData.hero) {
+			heroSection.innerHTML = `
+				<div class="section-label">${pageData.hero.label}</div>
+				<h1>${pageData.hero.title}</h1>
+				<p>${pageData.hero.description}</p>
+			`;
+		}
+
+		if (infoGrid && Array.isArray(pageData.cards)) {
+			infoGrid.innerHTML = pageData.cards.map((card) => {
+				const bodyContent = card.type === 'list'
+					? `<ul>${card.items.map((item) => `<li>${item}</li>`).join('')}</ul>`
+					: `<p>${card.content}</p>`;
+
+				return `
+					<article class="info-card">
+						<h2>${card.title}</h2>
+						${bodyContent}
+					</article>
+				`;
+			}).join('');
+		}
+	</script>
+
 	<script src="action.js"></script>
 </body>
 </html>
